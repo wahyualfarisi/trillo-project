@@ -60,12 +60,15 @@ body {
   display: flex; }
 
 .sidebar {
-  background: blue;
-  flex: 0 0 18%; }
+  background: var(--color-grey-dark-1);
+  flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .hotel-view {
-  background: red;
-  flex: 1; }
+  flex: 1;
+  height: 80rem; }
 
 .logo {
   height: 3.25rem;
@@ -143,3 +146,32 @@ body {
     height: 3.75rem;
     border-radius: 50%;
     margin-right: 1rem; }
+
+.side-nav {
+  list-style: none;
+  font-size: 1.4rem;
+  margin-top: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .side-nav__item:not(:last-child) {
+    margin-bottom: 1.9rem; }
+  .side-nav__link:link, .side-nav__link:visited {
+    color: var(--color-grey-light-1);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center; }
+  .side-nav__icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 2rem;
+    fill: currentColor; }
+
+.legal {
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  padding: 4rem; }

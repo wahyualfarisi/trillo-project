@@ -65,7 +65,6 @@
 
 ///USER NAV
 .user-nav {
-    
     align-self: stretch;
 
     display: flex;
@@ -117,5 +116,55 @@
         border-radius: 50%;
         margin-right: 1rem;
     }
+}
 
+
+
+//////SIDE NAVIGATION
+.side-nav {
+    list-style: none;
+    font-size: 1.4rem;
+    margin-top: 4.5rem;
+    
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__item {
+        &:not(:last-child){
+            margin-bottom: 1.9rem;
+        }
+    }
+
+    &__link:link,
+    &__link:visited {
+        color: var(--color-grey-light-1);
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        padding: 1.5rem 3rem;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-right: 2rem;
+        fill: currentColor;
+    }
+}
+
+
+
+
+
+//////LEGAL TEXT
+.legal {
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    padding: 4rem;
 }
