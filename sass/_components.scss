@@ -132,9 +132,40 @@
     justify-content: space-between;
 
     &__item {
+        position: relative;
+
+
         &:not(:last-child){
             margin-bottom: 1.9rem;
         }
+
+        //set  when clicked link
+        &:active:before {
+            background-color: orange;
+        }
+    }
+
+    &__item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--color-primary);
+
+        transform: scaleY(0); //state scale
+
+        transition: transform .2s,
+                    width .4s cubic-bezier(1,0,0,1) .2s, // .2s is delay
+                    background-color .2s;
+    }
+
+    //to action 
+    &__item:hover::before , 
+    &__item--active::before {
+        transform: scaleY(1); //change state
+        width: 100%;
     }
 
     &__link:link,
@@ -147,6 +178,9 @@
 
         display: flex;
         align-items: center;
+
+        position: relative;
+        z-index: 10;
     }
 
     &__icon {
