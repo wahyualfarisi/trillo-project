@@ -23,6 +23,12 @@ COLORS
     --line: 1px solid var(--color-grey-light-2);
 }
 
+$bp-largest: 75em; //1200
+$bp-large: 68.75em; //1100
+$bp-medium: 56.25em; //900
+$bp-small: 37.5em; //600
+$bp-smallest: 31.25em; //500
+
 * {
     margin: 0;
     padding: 0;
@@ -37,6 +43,10 @@ COLORS
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+
+    @media only screen and(max-width: $bp-large){
+        font-size: 50%;
+    }
 }
 
 body {
