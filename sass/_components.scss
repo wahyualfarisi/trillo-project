@@ -218,7 +218,7 @@
 //////OVERVIEW
 .overview {
     display: flex;
-    border-bottom: 1px solid var(--color-grey-light-2);
+    border-bottom: var(--line);
     
     align-items: center;
     background-color: #fff;
@@ -293,8 +293,17 @@
     color: var(--color-primary);
     transition: all .2s;
 
+    & span {
+        margin-left: 3px;
+        transition: margin-left .2s;
+    }
+
     &:hover {
         color: var(--color-grey-dark-1);
+
+        span {
+            margin-left: 8px;
+        }
     }
 
     &:focus {
@@ -317,4 +326,140 @@
         transform: scale(1);
         box-shadow: none;
     }
+}
+
+//PARAGRAPH
+.paragraph:not(:last-of-type){
+    margin-bottom: 3rem;
+}
+
+
+
+//LIST
+.list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4rem 0;
+    margin: 2rem 0;
+    
+    border-top: var(--line);
+
+    &__item {
+        flex: 0 0 50%;
+        margin-bottom: 1.1rem;
+
+    }
+
+    &__item:before {
+        content: "";
+        display: inline-block;
+        margin-right: .7rem;
+
+        background-color: var(--color-primary);
+        -webkit-mask-image: url(../img/chevron-thin-right.svg);
+        -webkit-mask-size: cover;
+
+        mask-image: url(../img/chevron-thin-right.svg);
+        mask-size: cover;
+
+        width: 1rem;
+        height: 1rem;
+        
+    }
+}
+
+//RECOMEND
+.recomend {
+    display: flex;
+    align-items: center;
+    border-top: var(--line);
+
+    &__count {
+        font-size: 1.2rem;
+        margin-right: auto;
+        color: var(--color-grey-dark-3);
+    }
+
+    &__friends {
+       display: flex;
+
+        
+    }
+
+    &__photo {
+        box-sizing: content-box;
+        display: inline-block;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        margin-left: -2rem;
+        border: 3px solid #fff;
+    }
+}
+
+
+
+//REVIEW
+.review {
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+    overflow: hidden;
+
+
+    &__text {
+        margin-bottom: 2rem;
+        z-index: 10;
+        position: relative;
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+        
+    }
+
+    &__photo {
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 50%;
+        margin-right: 1.8rem;
+    }
+
+    &__user-box {
+        margin-right: auto;
+    }
+
+    &__user-name {
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    &__user-date {
+        font-size: 1rem;
+        color: var(--color-grey-dark-3);
+    }
+
+    &__rating {
+        font-size: 2.2rem;
+        font-weight: 300;
+        color: var(--color-primary);
+    }
+
+    &::before {
+        content: "\201C";
+        position: absolute;
+        top: -2.75rem;
+        left: -1rem;
+        line-height: 1;
+        font-size: 20rem;
+        color: var(--color-grey-light-2);
+        font-family: sans-serif;
+        z-index: 1;
+    }
+
 }
