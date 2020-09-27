@@ -6,3 +6,6 @@
 
 ## Mobile View
 ![alt text](https://github.com/wahyualfarisi/trillo-project/blob/master/sc/mobile.png?raw=true)
+
+## Mobile View
+![alt text](https://github.com/wahyualfarisi/trillo-project/blob/master/sc/mobile-2.png?raw=true)
